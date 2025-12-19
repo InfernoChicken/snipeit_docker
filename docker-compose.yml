@@ -17,7 +17,7 @@ services:
     
     labels:
       caddy: inventar.rockag.net
-      caddy.reverse_proxy: "{{upstreams ${APP_PORT:-8000}}}"
+      caddy.reverse_proxy: "{{upstreams 80}}"
 
     depends_on:
       db:
