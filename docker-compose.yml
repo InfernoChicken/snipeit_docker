@@ -14,6 +14,7 @@ services:
     networks:
       - web
       - caddy
+      - smtp
     
     labels:
       caddy: inventar.rockag.net
@@ -53,4 +54,6 @@ networks:
   web:
     driver: bridge
   caddy:
+    external: true
+  smtp:
     external: true
